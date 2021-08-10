@@ -1,7 +1,10 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import {HeaderButtons, Item } from 'react-navigation-header-buttons'
+import HeaderButton from '../components/HeaderButton'
 import Colors from '../Constants/Colors'
 import { MEALS } from '../data/dummy-data'
+
 
 const MealDetailsScreen = () => {
     return (
@@ -19,13 +22,19 @@ MealDetailsScreen.navigationOptions = (navigationData) => {
 
     return {
         headerTitle: selectedCategory.title,
+        
+        headerRight: ()=> <HeaderButtons HeaderButtonComponent={HeaderButton} >
+                    <Item iconName='ios-star' onPress={()=>{
+    
+                    }} />
+                </HeaderButtons>
+        ,
         headerStyle: {
             backgroundColor: Colors.primaryColor,
-
-
         },
         headerTintColor: "white"
     }
+    
 
 }
 const styles=StyleSheet.create({
