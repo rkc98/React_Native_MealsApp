@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, View ,Text, FlatList, TouchableOpacity} from 'react-native'
+import CategoryGridTile from '../components/CategoryGridTile'
 import Colors from '../Constants/Colors'
 import {CATEGORIES} from '../data/dummy-data'
 
@@ -8,18 +9,14 @@ import {CATEGORIES} from '../data/dummy-data'
 const CategoriesScreen = (props) => {
     const renderGridItem=(itemdata)=>{
         return(
-            <TouchableOpacity style={styles.grid} onPress={()=>{
-                props.navigation.navigate({routeName:'CategoriesMeals',params:{
-                    categoryId:itemdata.item.id,
-                    
-                }})
-            }}>
-            <View >
-            <Text>
-                {itemdata.item.title}
-            </Text>
-        </View>
-        </TouchableOpacity>
+<CategoryGridTile  title={itemdata.item.title} color={itemdata.item.color} onSelect={()=>{
+    props.navigation.navigate({routeName:'CategoriesMeals',params:{
+        categoryId:itemdata.item.id,
+
+        
+    }})
+
+}}     />
         )
     }
     return (
