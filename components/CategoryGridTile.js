@@ -15,19 +15,20 @@ const styles=StyleSheet.create({
     grid:{
         flex:1,
         margin:15,
-        height:150
+        height:150, 
+        elevation:5,
     },
     container:{
         flex:1,
         borderRadius:10,
         shadowColor:'black',
-        shadowOpacity:0.26,
+        shadowOpacity:0.1,
         shadowOffset:{
-            width:0,
+            width:2,
             height:2
         },
         shadowRadius:10,
-        elevation:3,
+
         padding:15,
         justifyContent:'flex-end',
         alignItems:'flex-end'
@@ -35,8 +36,9 @@ const styles=StyleSheet.create({
 
     },
     title:{
-        // fontFamily:'open-sans',
-        fontSize:18
+        fontFamily:'sans-serif',
+        fontSize:18,
+        fontWeight:'bold'
     }
 })
 export default CategoryGridTile
