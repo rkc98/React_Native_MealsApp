@@ -22,7 +22,7 @@ const MealItem = (props) => {
                     </Text>
                     <Text>
                         {props.affordability}
-                        {console.log(props.affordability)}
+                        {/* {console.log(props.affordability)} */}
                     </Text>
 
 

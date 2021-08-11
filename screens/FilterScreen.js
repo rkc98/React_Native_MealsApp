@@ -1,5 +1,5 @@
 import React from 'react'
-import { View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 
 const FilterScreen = () => {
     return (
@@ -10,6 +10,10 @@ const FilterScreen = () => {
 
     </View>
     )
+}
+FilterScreen.navigationOptions={
+    headerTitle:"Filter Meals"
+
 }
 const styles=StyleSheet.create({
     screen:{
